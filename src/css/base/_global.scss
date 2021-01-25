@@ -1,0 +1,75 @@
+     //teal!
+// #wpadminbar{
+// 	background-color: $color-swatch-headstand-1 !important;
+// }
+
+html{
+	margin-top: 0 !important;
+}
+body{
+	a{
+	text-decoration: none;
+	color: unset; //tired of purple links
+	}
+	background-color: $background-global;
+	//ooooo faanccy
+	@include fadein;
+}
+
+//probably not best practice for font hierarchy. decorator classes? mixins?
+h1{
+	margin-top: 0;
+	font-family: $h1-global-font;
+	font-size: $h1-global-size-mobile;
+	font-weight: $h1-global-weight;
+	@include tablet{
+		font-size: $h1-global-size;
+	}
+}
+
+h2{
+	font-family: $h2-global-font;
+	font-size: $h2-global-size; ;
+	font-weight: $h2-global-weight;
+}
+
+//this is incredibly risky but lets see what happens
+h3{
+	// margin-top: 0;
+	font-family: $h3-global-font;
+	font-size: $h3-global-size;
+	font-weight: $h3-global-weight;
+}
+
+h4{
+	font-family: $h4-global-font;
+	font-size: $h4-global-size ;
+	font-weight: $h4-global-weight;
+}
+
+
+a{
+
+}
+
+//catchall "p" style seems like a bad idea. but maybe some need for a fallback?
+// p{
+// 	font-family: $font-text;
+// 	font-size: $page-generic-font-size-mobile;
+// 	line-height: $page-generic-line-height;
+// 	@include mobile {
+// 		font-size: $page-generic-font-size;
+// 	}
+// }
+
+hr{
+	// @include tablet{
+	// 	margin-top: $section-spacer-default - 32px; //?
+	// }
+	margin-top: $section-spacer-default;
+	margin-right: $container-margin-large;
+	margin-left: $container-margin-large;
+	margin-bottom: 0;
+	border: 1px solid $color-swatch-headstand-2;
+}
+

@@ -1,0 +1,159 @@
+.page-id-700  #footer{
+    display:none;
+}
+.page-id-700 .content-wrapper#content{
+    overflow-x: unset;
+}
+
+.container--slides{
+    height: 100vh;
+    h1{
+        color: white;
+    }
+}
+
+.learn-panel {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-right: $container-margin-large;
+    padding-left: $container-margin-large;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-blend-mode: $learn-panel-blend-mode;
+    background-color: #666666;
+    color: white;
+    &__text{
+        display: flex;
+        // align-items: center;
+        flex-direction: column;
+        height: 100%;
+        padding-top: $learn-panel-padding-top;
+        p{  
+            margin: 10px;
+            font-family: $learn-font;    
+            font-size: $learn-font-size-mobile;
+            line-height: $learn-line-height;
+            @include tablet{
+                font-size: $learn-font-size;
+            }
+        }
+        strong{
+            margin-bottom: 0px;
+            font-family: $learn-header-font;
+            font-size: $learn-header-font-size;
+            line-height: $learn-header-line-height;
+            font-weight: $learn-header-font-weight;
+        }
+    }
+}
+.learn-panel.one {
+    position: relative;
+    z-index: -1;
+    background-color: $learn-panel-one-bg-color;
+}
+.learn-panel.two {
+    .panel__text{
+        width: 50%;
+        margin-left: auto;
+    }
+}
+.learn-panel.three {
+    background-color: $learn-panel-three-bg-color;
+    .panel__text{
+    }
+}
+.learn-panel.four {
+    .panel__text{
+    }
+}    
+
+.hero--learn{
+    display: flex;
+    justify-content: $hero-title-learn-justify;
+    align-items: $hero-title-learn-align;
+    height: $hero-learn-height;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #e2e2e2;
+    .hero__title--learn{ 
+        margin-top: -120px;
+        text-align: $hero-title-learn-justify;
+        font-size: $hero-title-learn-size-mobile;            
+        font-family: $hero-title-learn-font;
+        color: white;
+        @include tablet{
+            font-size: $hero-title-learn-size;            
+        }
+    }
+}
+
+#menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    top: 100vh - $learn-submenu-height;
+    width: 100%;
+    height: $learn-submenu-height;
+    padding-left: $container-margin-large / 2;
+    padding-right: $container-margin-large / 2;
+    background: $learn-submenu-bg;
+    font-family: $learn-submenu-font;
+    font-size: $learn-submenu-font-size;
+    a{
+        margin-right: $learn-submenu-spacing;
+        color: $color-swatch-headstand-4;
+        font-weight: 500;
+        //indicator
+        &.selected{
+            color: $learn-submenu-indicator-color 
+        }
+    }
+}
+
+
+
+.container--academics{
+    padding-right: $container-margin-large;
+    padding-left: $container-margin-large;
+    margin-top: 0;
+    padding-top: 5%;
+    padding-bottom: 15%;
+    font-family: $font-text;
+    font-size: $page-generic-font-size;
+    h1{
+        text-align: $academics-font-align;
+        color: $academics-font-color;
+        font-family: $academics-font;
+    }
+}
+
+//going in desktop first , wish me luck 
+@media screen and (max-width: #{$tablet}) , (max-height: 600px){
+
+    .learn-panel{
+        height: unset;
+        &__text{
+            width: 100% !important;
+            padding-bottom: 200px;
+            strong{
+                opacity: 1 !important;
+                padding-bottom: 2em;
+                font-size: 2em;
+            }
+            p{
+                opacity: 1 !important;                
+            }
+        }
+
+    }
+
+    #menu{
+        display: none;
+    }
+
+}
+

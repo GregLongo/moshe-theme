@@ -1,0 +1,42 @@
+.qotd{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: $section-spacer-default/2;
+	padding-bottom: $section-spacer-default/2;
+	background: none;
+	font-family: $qotd-font;
+	font-size: $qotd-font-size-mobile;
+	color: $qotd-color;
+	font-style: $qotd-font-syle;
+	@include desktop{
+		padding-left: 48px;
+		padding-top: 0;
+	}
+	@include widescreen{
+		font-size: $qotd-font-size;		
+	}
+}
+
+.promo-video{
+	width: 100%;
+	text-align: center;
+	iframe{
+		@include mobile-max{
+			width: 100%;
+		}
+	}
+}
+
+.home__misc{
+	display: block;		
+	margin-right: $container-margin-large;
+	margin-left: $container-margin-large;
+	margin-top: $section-spacer-default;
+	margin-bottom: $section-spacer-default - 48px;//account for svg mask under		
+	@include desktop{
+		display: flex;
+		height: 360px;
+		// margin-bottom: $section-spacer-default * 2;		
+	}
+}

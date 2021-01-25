@@ -1,0 +1,27 @@
+{% extends 'base.twig' %}
+{% block content %}
+
+{% include "partials/hero-class.twig" %}
+
+<div class="audio__wrapper">
+	<div class="audio__wysiwyg">
+	{{ post.content }}
+	</div>
+	<div class="audio__gallery">
+	{#seem to have hit youtube api quota. no embed for now #}
+		{%  for i in range(1, 24) %}
+			<a href="https://www.youtube.com/embed?v=oZUS6PqVp88&list=PLtOWkDblhNvDD9GatkEGQy2jfnhi7DWhd&index={{i}}" target="_blank">
+
+			<div class="audio__item audio__item-{{i}}"
+			 style="background-image: url('https://source.unsplash.com/collection/1240/200x{{200+i}}')">
+				{#random BG image from unsplash API#}
+				<h4>ATM Lesson {{ i }}</h4>
+				<span >
+				Listen on Youtube
+				</span>
+			</div>
+			</a>
+		{%  endfor %}
+	</div>
+</div>
+{%  endblock %}

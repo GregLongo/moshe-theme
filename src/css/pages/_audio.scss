@@ -1,0 +1,75 @@
+.audio{
+	&__wrapper{
+		margin-right: $container-margin-large;
+		margin-left: $container-margin-large;
+	}
+	&__wysiwyg{//this is not ideal but. should the image be a hero? i dunno. i'm tired
+		margin-top: $section-spacer-default;
+		h2{
+			font-size: $h2-global-size !important;
+		}
+		h3{
+			font-size: $h3-global-size !important;
+		}
+		img{
+			width: 100%;
+			margin-top: $section-spacer-default/2;
+		}
+		p{
+			font-family: $font-text;
+			font-size: $page-generic-font-size-mobile;
+			line-height: $page-generic-line-height;
+			@include mobile {
+				font-size: $page-generic-font-size;
+			}
+		}
+	}
+	&__gallery{
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-column-gap: $audio-grid-gap;
+		grid-row-gap: $audio-grid-gap;
+		margin-top: $section-spacer-default/3;
+		margin-bottom: $section-spacer-default;
+	@include small{
+		grid-template-columns: repeat(2, 2fr);
+	}
+	@include tablet{
+		grid-template-columns: repeat(4, 1fr);
+		}
+	}
+	&__item{
+		@include tablet{
+			background-size: 100% auto;
+			&:hover{
+				background-size: $audio-grid-item-zoom auto;
+				span{
+					opacity: 1;
+				}
+			}
+		}
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		transition: all .4s ease;
+		height: 200px;
+		background-size: cover;
+		background-position: center;
+		background-color: darkgrey;
+		background-blend-mode: multiply;
+		cursor:pointer;
+		color: white;
+		h4{
+			font-family: $audio-grid-label-font;
+			font-size: $audio-grid-label-size;
+		}
+		span{
+			opacity: 0;
+			transition: opacity .4s ease;
+			font-family: $font-headings;
+			color: white;
+		}
+	}
+}
+

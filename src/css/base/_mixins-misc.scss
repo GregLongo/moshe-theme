@@ -1,0 +1,11 @@
+
+//Fade in div
+@mixin fadein{
+  @keyframes fadein{
+    from{opacity:0;}
+    to{opacity:1;}
+  }
+  opacity:0;
+  animation: fadein $fade-global forwards; 
+}
+

@@ -1,0 +1,37 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<ul id="menu">
+    <li><a href="#learn-panel-1">Feldenkrais & Neuroplasticity</a></li>
+    <li><a href="#learn-panel-2">History</a></li>
+    <li><a href="#learn-panel-3">Awareness Through Movement</a></li>
+    <li><a href="#learn-panel-4">Functional Integration</a></li>
+    <li><a href="#learn-panel-5">Academics</a></li>
+</ul>
+<div style=" background-image:url({{post.thumbnail}});" class="hero--learn">
+	<span class="hero__title--learn">{{ post.title }}</span>
+</div>
+<div id="wrapper" class="container--slides ">
+	<div id="learn-panel-1" class="learn-panel one" style="background-image:url({{post.meta('imageslide_0')}})">
+		<div class="learn-panel__text" >{{post.content}}</div>
+	</div>
+	<div style="background-image:url({{post.meta('imageslide_1')}})" id="learn-panel-2" class="learn-panel two">
+		<div class="learn-panel__text">
+			{{ post.meta('slidetext_1') }}
+		</div>
+	</div>
+	<div style="background-image:url({{post.meta('imageslide_2')}})" id="learn-panel-3" class="learn-panel three">
+		<div class="learn-panel__text">
+			{{ post.meta('slidetext_2') }}
+		</div>
+	</div>
+	<div style="background-image:url({{post.meta('imageslide_3')}})" id="learn-panel-4" class="learn-panel four">
+		<div class="learn-panel__text">
+			{{ post.meta('slidetext_3') }}
+		</div>
+	</div>
+<div class="container--academics" id="learn-panel-5">
+	{{ post.meta('slidetext_5') }}	
+</div>
+</div><!-- /content-wrapper -->
+{% endblock %}

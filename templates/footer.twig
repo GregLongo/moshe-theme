@@ -1,0 +1,20 @@
+<div class="footer">
+	<div class="footer__wrapper">
+	<div class="footer__social-wrapper">
+		<h2>Connect</h2>
+		<div class="footer__social">
+			{% for item in options.social_media %}
+				<div class="footer__social-logo">
+					<span class="fab fa-{{ item.social_channel }}" aria-hidden="true"></span>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="footer__logo-wrapper">
+				{% if custom_logo_url %} 
+						<img class="footer__logo" src="{{ custom_logo_url }}" />
+				{% endif %}
+	</div>
+	</div>
+		<span class="copyright" >Copyright {{"now"|date('Y')}} Feldenkrais San Diego | Genius of Movement</span>
+</div>

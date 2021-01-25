@@ -1,0 +1,12 @@
+input[type=submit].um-button{
+	background: $button-color !important;
+	&:hover{
+		background: $button-color-hover !important;
+	}
+}
+
+.um{
+	font-family: $font-text;
+	font-size: $page-generic-font-size;
+	line-height: $page-generic-line-height;
+}

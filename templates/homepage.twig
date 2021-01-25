@@ -1,0 +1,18 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	{% include "partials/hero-slideshow.twig" %}
+	{% include "partials/wysiwyg.twig" with {location:'home'} %}
+	{% include "partials/zoom-gallery.twig" with {meetings:'5', viewschedule:'visible'} %}
+	<hr>
+	{% include "partials/class-gallery.twig" %}
+	<hr>
+	{% include "partials/anim-section.twig" %}
+	{% include "partials/parallax-gallery.twig" %}
+	<hr>
+	<div class="home__misc">
+		{% include "partials/video-embed.twig" %} {# youtube embed causes console errors #}
+		{% include "partials/qotd.twig" %}
+	</div>
+	{% include "partials/cta-parallax.twig" %}
+{% endblock %}

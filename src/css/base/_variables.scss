@@ -1,0 +1,371 @@
+
+
+//==============================================================================
+// Breakpoints
+//==============================================================================
+
+$small: 362px !default;
+$mobile: 760px !default;
+$tablet: 1000px !default;
+$desktop: 1200px !default;
+$desktop-wide: 1600px !default;
+$desktop-xl: 2000px !default;
+
+
+//==============================================================================
+// Colors
+
+//Raw Colors
+//kept for posterity
+// $color-swatch-headstand-1 : teal;
+// $color-swatch-headstand-2 : #568203 ;
+// $color-swatch-headstand-3 : #296192;
+$color-tasteful-green: #77a464;
+// $color-swatch-headstand-1 : #008983;//teal
+// $color-swatch-headstand-2 : #C4C581;//gold
+// $color-swatch-headstand-3 : #98473E;//rust
+// $color-swatch-headstand-4 : #033F63;//slate
+
+$color-swatch-headstand-1 : #008983;//teal
+$color-swatch-headstand-2 : #AFC36C ;//avocado
+$color-swatch-headstand-3 : #98473E;//rust
+$color-swatch-headstand-4 : #033F63;//slate
+
+$charcoal: #333333;
+
+//Applied Colors
+$background-global: #FCF6EE;
+$text-color-primary:  $charcoal;
+$text-color-light: white;
+//==============================================================================
+// fonts
+//==============================================================================
+
+$font-headings: 'Quicksand', sans-serif;
+// $font-text: Ebrima ;
+$font-text: 'Quattrocento Sans';
+$font-fallback:'Open Sans', Arial, Helvetica, sans-serif;
+$font-serif-fallback: Georgia, serif;
+$font-gothic: ltc-globe-gothic, sans-seriff;
+$line-height-global: initial;
+
+$h1-global-size: 3.5em;
+$h1-global-size-mobile: 3em;
+$h1-global-size-tablet: tbd;
+$h1-global-weight: 200;
+$h1-global-font: $font-gothic;
+
+$h2-global-size: 2em;
+$h2-global-size-mobile: tbd;
+$h2-global-size-tablet: tbd;
+$h2-global-weight: 200;
+$h2-global-font: $font-headings;
+
+$h3-global-size: 2em;
+$h3-global-size-mobile: tbd;
+$h3-global-size-tablet: tbd;
+$h3-global-weight: 200;
+$h3-global-font: $font-headings;
+
+$h4-global-size: 2em;
+$h4-global-size-mobile: tbd;
+$h4-global-size-tablet: tbd;
+$h4-global-weight: 200;
+$h4-global-font: $font-headings;
+//==============================================================================
+// Spacing
+//==============================================================================
+$container-header:2.5%;
+$container-margin-large: 15%;
+$container-margin-medium: 20%;
+$section-spacer-default: 120px;
+//==============================================================================
+// Components
+//==============================================================================
+//atoms
+
+$button-color: $color-swatch-headstand-1;
+$button-color-hover: $color-swatch-headstand-4;
+$button-font: $font-text;
+$button-padding-class-gallery: 8px 12px 8px 12px;
+$button-border-class-gallery: none;
+
+
+$section-title-font: $font-gothic;
+$section-title-color: $color-swatch-headstand-1;
+$section-title-size: 3em;
+$section-title-weight: 400;
+$section-subtitle-font: $font-headings;
+$section-subtitle-color: $color-swatch-headstand-1;
+$section-subtitle-size: 1.125em;
+$section-subtitle-weight: 600;
+$section-subtitle-size-mobile: .9em;
+$section-title-horiz-spacer: none;
+$section-title-margin-bottom: 16px;
+$section-title-justify: space-between;
+
+//Header____________
+$header-affix-transition: .2s;
+$header-affix-home: fixed;
+$header-affix-page: fixed;
+$header-padding-left: $container-header;
+$header-padding-right: $container-header;
+$header-padding-mobile: 16px;
+$header-height: 160px;
+$header-height-mobile: 100px;
+$header-z: 10;
+$header-bg: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,.4) 70%, rgba(255,255,255,0) 100%);
+$header-bg-dark: linear-gradient(to bottom, rgba(8,75,131,0.65) 0%,rgba(8,75,131,0) 100%);
+$header-logo-height: 88px;
+$header-logo-top-mobile: 20vh;
+$header-logo-height-small: 42px;
+$header-logo-height-mobile: 56px;
+$header-logo-height-tablet: 64px;
+$header-bg-fixed: white;
+$header-fixed-shadow: 0px 0px 4px 4px rgba(41,41,41,.05);
+$header-height-fixed: $header-height/2;
+$header-logo-fixed-scale-factor: .8;
+//Footer____________
+
+$footer-height: 96px;
+$footer-text-align: center;
+$footer-content-justify: center;
+$footer-affix: relative;
+$footer-height-real: 300px;
+$footer-title-size: 3em;
+$footer-title-size-mobile: 2em;
+$footer-title-font: $font-gothic;
+$footer-social-icon-size: 48px;
+$footer-social-icon-size-mobile: 32px;
+$footer-logo-height: 88px;
+
+//Hero_____________
+
+$slider-height: 100vh;
+$slider-height-mobile: 101vh;
+$slider-content-vertical: flex-end;
+$slider-content-horizontal: flex-end;
+$slider-content-margin-right: $container-header ;
+$slider-content-margin-bottom: 120px;
+$slider-caption-text-align: right;
+$slider-caption-font: $font-gothic;
+$slider-caption-font-color: white;
+$slider-caption-font-size: 4em;
+$slider-caption-font-size-small: 2em;
+$slider-caption-font-size-mobile: 3em;
+$slider-caption-font-size-tablet: 4em;
+$slider-caption-font-weight: 500;
+$slider-caption-margin-bottom: 40px;
+$slider-caption-y-mobile: 20v;
+$slider-caption-min-width: 30vw;
+$slider-button-padding: 24px 52px 24px 52px;
+$slider-button-padding-mobile: 12px;
+$slider-button-padding-tablet: 12px;
+$slider-button-font: $font-headings ;
+$slider-button-font-size: 1.75em;
+$slider-button-font-size-mobile: 1.5em;
+$slider-button-border: 4px solid white ;
+$slider-button-background: none;
+$slider-button-width-mobile: 60%;
+$slider-button-float: right;
+$slider-button-background-hover: #ffffff33;
+
+// $slider-scrim: linear-gradient(160deg, rgba(31,142,163,0) 0%,rgba(31,142,163,0) 40%,rgba(31,142,163,1) 80%,rgba(31,142,163,1) 100%);
+$slider-scrim: linear-gradient(160deg, #AFC36C00 0%, #AFC36C00 40%, #AFC36CCC 80%, #AFC36CFF 100%);
+// $slider-scrim-mobile:  rgba(202,204,144,.8);
+$slider-scrim-mobile:  rgba(175, 195, 108, .8);// thi sis a puke color
+// $slider-scrim-mobile:  rgba(100, 100, 100, .4);//honestly just a subtle grey scrim is best
+
+$slider-scrim-dark: linear-gradient(160deg, rgba(8,75,131,0) 0%,rgba(8,75,131,0) 40%,rgba(8,75,131,.8) 70%,rgba(8,75,131,1) 100%);
+
+$hero-height: 100vh;
+$hero-caption-font-size: $slider-caption-font-size;
+$hero-button-bottom: 20vh;
+
+$hero-content-justify: flex-end;
+$hero-content-align: flex-end;
+$hero-caption-font-color: $slider-caption-font-color;
+//Nav_____________
+$nav-link-color: $color-swatch-headstand-1;
+$nav-link-size: 1.2em;
+$nav-link-size-sm: 1em;
+$nav-link-margin: 0px;
+$nav-link-weight: 500;
+$nav-link-font: $font-headings;
+$nav-link-size-mobile: 1.5em;
+$nav-bg-mobile: $color-swatch-headstand-2;
+$nav-link-color-mobile: white;
+$nav-menu-link-color-hover: $color-swatch-headstand-2;
+$hamburger-color: $color-swatch-headstand-1;
+
+$nav-submenu-bg: white;
+$nav-submenu-flex-direction: column;
+$nav-submenu-link-color: $color-swatch-headstand-1;
+$nav-submenu-bg-filter: blur(40px) ; //think this effect turned off
+//==============================================================================
+// Pages
+//==============================================================================
+
+//Generic Page_______________
+
+$page-title-align-generic: center;
+$page-title-color-generic: $color-swatch-headstand-1;
+$page-generic-font-size: 1.2em;
+$page-generic-font-size-mobile: 1.1em;
+$page-generic-line-height: 1.5;
+$page-padding-top-generic-mobile: $section-spacer-default;
+
+$page-generic-list-item-font: $font-headings;
+$page-generic-list-item-size: 1.5em;
+$page-generic-list-item-weight: 700;
+$page-generic-list-line-height: 2;
+
+$h1-page-generic-align: center;
+
+//Home______________
+
+$intro-paragraph-color: white;
+$intro-paragraph-bg: url('../images/halfcurvy.svg');
+
+$intro-paragraph-header-mobile: 2.25em;
+$intro-paragraph-header: 2.5em;
+$home-intro-text: 1.5em;
+$home-intro-text-mobile: 1.25em;
+$home-intro-text-weight: 400;
+
+$class-gallery-item-height: 300px;
+$class-gallery-font-size: 1.75em;
+
+$anim-section-vertical-padding: $section-spacer-default  - 32px;;
+$anim-section-bg: url('../images/curvy.svg');
+$anim-section-text-size: 1.5em;
+$anim-shrink-factor: .7; //shrinks on desktop
+
+$curve-shadow: 0px 4px 6px #00000029;
+
+$parallax-gallery-img-width-mobile: 40vw;//deprecated, using grid container
+$parallax-gallery-column-gap: 48px;
+
+$qotd-font-size: 2.25em;
+$qotd-font-size-mobile: 1.5em;
+$qotd-color: $color-swatch-headstand-1;
+$qotd-font-syle: none;
+$qotd-font: $font-gothic;
+
+$two-col-text: 1.125em;
+
+$cta-parallax-height: 400px;
+$cta-parallax-header-size: 3em;
+$cta-parallax-header-size-mobile: 2em;
+
+$newsletter-email-align: center;
+$newsletter-email-height: 3em;
+$newsletter-email-width: 80vw;
+$newsletter-email-width-mobile: 40vw;
+
+//Class
+
+$windowpane-pane-width: 220px;
+$windowpane-pane-height: 300px;
+$windowpane-grid-gap: 40px;
+$windowpane-grid-gap-mobile: 20px;
+$windowpane-vert-offset: 48px;
+
+$buy-course-price-font: $font-gothic;
+$buy-course-price-size: 3em;
+$buy-course-price-color: white;
+$buy-course-price-margin: 1em;
+$buy-course-img-width-mobile: 80%; 
+$buy-course-img-height: 400px;
+$buy-course-button-text: 2em;
+$buy-course-button-padding: 16px 96px 16px 96px;
+
+//About
+
+$h4-mission-size: 1.5em;
+$h4-mission-size-mobile: 1.375em;
+$h4-mission-font: $font-text;
+$mission-font-color: white;
+$mission-background-position: 0 50%;
+
+//Audio
+
+$audio-grid-gap: 16px;
+$audio-grid-item-zoom: 105%;
+$audio-grid-label-font: $font-headings;
+$audio-grid-label-size: 1.25em;
+
+
+//Learn
+$learn-panel-padding-top: 14vh;
+$learn-font: $font-text;
+$learn-font-size: 1.25em;
+$learn-font-size-mobile: 1.125em;
+$learn-line-height: 1.2;
+$learn-header-font: $font-headings;
+$learn-header-font-size: 2em;
+$learn-header-line-height: 1.3;
+$learn-header-font-weight: 400;
+$learn-panel-blend-mode: multiply;
+$learn-panel-one-bg-color: $color-swatch-headstand-2;
+$learn-panel-three-bg-color: $color-swatch-headstand-4;
+$hero-learn-height: 100vh;
+$hero-title-learn-justify: center;
+$hero-title-learn-align: center;
+$hero-title-learn-font: $font-gothic;
+$hero-title-learn-size: 3em;
+$hero-title-learn-size-mobile:3em;
+$learn-submenu-height: 8vh;
+$learn-submenu-font: $font-headings;
+$learn-submenu-bg: white;
+$learn-submenu-font-size: 1.2em;
+$learn-submenu-spacing: 80px;
+$learn-submenu-indicator-color: $color-swatch-headstand-2;
+$academics-font: $font-headings;
+$academics-font-color: black;
+$academics-font-align: center;
+
+//Posts_____________
+
+
+
+//404______________
+$fourohfour-font: $font-gothic;
+$fourohfour-font-size: 4em;
+$fourohfour-font-color: white;
+
+//==============================================================================
+// FX
+//==============================================================================
+
+$fade-global: 2s;
+
+$ken-burns-speed: 5s;
+$ken-burns-depth: 120% ;
+$ken-burns-origin: 115% ;
+$scrim-darken-basic : linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+
+
+//==============================================================================
+// Plugins
+//==============================================================================
+$zoom-gallery-item-border: 1px solid lightgrey;
+$zoom-gallery-item-margin: 30px;
+$zoom-gallery-item-bg: white;
+$zoom-gallery-item-min-width: 300px;
+$zoom-gallery-item-img-height: 240px;
+$zoom-gallery-item-button-padding: 10px 24px 10px 24px;
+$zoom-gallery-show-host: none;
+$zoom-join-link-color : $color-swatch-headstand-1;
+$zoom-start-link-color : $color-swatch-headstand-3;
+$zoom-header-color : $color-swatch-headstand-4;
+$zoom-timer-color : $color-swatch-headstand-1;
+$zoom-sidebar-color : transparent;
+$zoom-start-link-hover-color: $color-tasteful-green;
+
+$woo-accent-color: $color-swatch-headstand-1;
+$woo-product-gallery-zoom: none;
+$woo-show-breadcrumb: none;
+$h1-woo-product-title-size: 2em;
+$h1-woo-product-align: left;
+$h2-woo-product-description-title-size: 2em;

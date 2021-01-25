@@ -1,0 +1,60 @@
+.about{
+	&__title{
+	}
+	&__sculpture{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100vw;
+		margin-bottom: $section-spacer-default ;
+		padding-left: $container-margin-large;
+		padding-right: $container-margin-large;
+		@include tablet{
+			flex-direction: row;
+			margin-top: $section-spacer-default/2;
+			margin-bottom: $section-spacer-default * 2;
+		}
+	}
+}
+
+//used for scultpture description because using 2col above
+//and why waste a good wysiwyg?
+.wysiwyg--about{
+	flex: 100%;
+	padding-bottom: $section-spacer-default /2 ;
+	p{
+		font-family: $font-text;
+		font-size: $home-intro-text;
+		font-weight: $home-intro-text-weight;
+	}
+	@include tablet{
+		padding-right: $section-spacer-default/2;
+		padding-bottom: 2 * $section-spacer-default;
+		padding-top: $section-spacer-default;
+	}
+	h1{
+		margin-top:0;
+	}
+}
+
+//where did this come from?
+.title-large--about{
+	display: none;
+}
+
+.mission{
+	color: $mission-font-color;
+	h4{
+		font-family: $h4-mission-font;	
+		font-size: $h4-mission-size-mobile;		
+		@include tablet{
+			font-size: $h4-mission-size;		
+		}	
+	}
+	padding-top: $section-spacer-default;
+	padding-bottom: $section-spacer-default;
+	padding-left: $container-margin-large;
+	padding-right: $container-margin-large;
+	background-size: cover;
+	background-position: $mission-background-position;
+}

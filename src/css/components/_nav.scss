@@ -1,0 +1,102 @@
+.hamburger{
+	display: flex;
+	justify-self: center;
+	padding: 0 !important;
+	outline: none !important;
+	@include tablet {
+		display: none !important;
+	}
+}
+
+// apparently you can style hamburgers.js via variables
+// in a hamburgers-settings.scss file. refer to docs for specifics
+// overriding here just cause
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after,{
+	background-color: $hamburger-color !important;
+}
+
+//i only exist on desktop
+.nav{
+    display:none;
+    li {
+    	// transition: all .2s ease;
+    	border-radius: 10px 10px 0 0;
+		&:hover a{
+			color: $nav-menu-link-color-hover;
+		}
+		&.hovered{
+			background-color: $nav-submenu-bg;
+		}
+
+	}
+	a{
+		display: block;
+		padding: 8px 8px;
+		margin-right: $nav-link-margin;
+		font-family: $nav-link-font;
+		font-weight: $nav-link-weight;
+		font-size: $nav-link-size-sm;		
+		color: $nav-link-color;
+		text-decoration: none;
+		@include desktop{
+			padding: 8px 12px;
+			font-size: $nav-link-size;
+
+		}
+	}
+	@include tablet {
+		display:flex;
+		ul{
+			&:first-child{
+			display: -webkit-box;
+			flex-wrap: wrap;
+    		min-width: 40%;
+			}
+			li:last-child a{
+				padding-right:0;
+			}
+		}
+	}
+	&__submenu{
+		background: $nav-submenu-bg;
+		padding-right: 24px ;
+		@include tablet{
+			flex-direction: $nav-submenu-flex-direction;
+			position: absolute;
+			opacity:0;
+			transition: all .2s ease;
+			pointer-events: none; //slightly hacky workaround to account for menu recursion
+		a{
+			color: $nav-submenu-link-color !important;
+			&:hover{
+				opacity: 1;
+				color: $nav-menu-link-color-hover !important;
+			}
+		}
+		&.open{
+			display: flex;
+			opacity: 1;
+			pointer-events: auto;
+			}
+		&.close{
+			opacity:0;
+			display: none;
+			}
+		}
+	}
+}
+
+//mmenu styles
+.nav--mobile{
+	display: none;
+	&.mm-spn{
+		font-family: $nav-link-font;
+		font-size: $nav-link-size-mobile;
+	}
+	&.mm-spn.mm-spn--light{
+    	background: $nav-bg-mobile;
+    	color: $nav-link-color-mobile;
+    }
+}

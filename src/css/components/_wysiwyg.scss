@@ -1,0 +1,24 @@
+.wysiwyg:not(.wysiwyg--about){
+	overflow: visible !important;
+	padding-left: $container-margin-large;
+	padding-right: $container-margin-large;
+	padding-top: $section-spacer-default/2;
+	padding-bottom: $section-spacer-default * 1.5;
+	background: $intro-paragraph-bg;
+	background-size: auto 100%;
+  	filter: drop-shadow( $curve-shadow);
+	font-family: $font-text;
+	font-size: $home-intro-text-mobile;
+	font-weight: $home-intro-text-weight;
+	color: $intro-paragraph-color;
+	@include mobile{
+		padding-top: $section-spacer-default;
+		background-size: 100% 100%;
+		font-size: $home-intro-text;
+	}
+	@include xl{
+		padding-left: $container-margin-medium;
+		padding-right: $container-margin-medium;		
+	}
+
+}

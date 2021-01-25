@@ -1,0 +1,60 @@
+{% include 'partials/section-title.twig' with {title:'Services', subtitle: 'Offered Via Video or In Person'} %}
+<div class="class-gallery class-gallery--full">
+	<div class="class-gallery__item" style="background-image: url({{ Image(options.class_primary_img).src('large') }})">
+			<div class="class-gallery__scrim">
+				<span class="class-gallery__label"> {{ options.class_primary_label }}</span>
+				<a class="class-gallery__link" href="{{options.class_primary_link}}">Learn More
+				</a>
+			</div>
+	</div>
+	<div class="class-gallery__item" style="background-image: url({{ Image(options.class_secondary_img).src('large') }})">
+		<div class="class-gallery__scrim">
+			<span class="class-gallery__label"> {{ options.class_secondary_label }}</span>
+			<a class="class-gallery__link" href="{{options.class_secondary_link}}">Learn More
+			</a>
+		</div>
+	</div>
+	<div class="class-gallery__item" style="background-image: url({{ Image(options.class_tertiary_img).src('large') }})">
+			<div class="class-gallery__scrim">
+				<span class="class-gallery__label"> {{ options.class_tertiary_label }}</span>
+				<a class="class-gallery__link" href="{{options.class_tertiary_link}}">Learn More
+				</a>
+			</div>
+	</div>
+	<div class="class-gallery__item" style="background-image: url({{ Image(options.class_quaternary_img).src('large') }})">
+			<div class="class-gallery__scrim">
+				<span class="class-gallery__label"> {{ options.class_quaternary_label }}</span>		
+			<a class="class-gallery__link" href="{{options.class_quaternary_link}}">Learn More
+			</a>
+			</div>
+	</div>
+		<div class="class-gallery__item" style="background-image: url({{ Image(options.class_fifth_img).src('large') }})">
+			<div class="class-gallery__scrim">
+				<span class="class-gallery__label"> {{ options.class_fifth_label }}</span>
+				<a class="class-gallery__link" href="{{options.class_fifth_link}}">Learn More
+				</a>
+			</div>
+	</div>
+	<div class="class-gallery__item" style="background-image: url({{ Image(options.class_sixth_img).src('large') }})">
+		<div class="class-gallery__scrim">
+			<span class="class-gallery__label"> {{ options.class_sixth_label }}</span>
+			<a class="class-gallery__link" href="{{options.class_sixth_link}}">Learn More
+			</a>
+		</div>
+	</div>
+	<div class="class-gallery__item" style="background-image: url({{ Image(options.class_seventh_img).src('large') }})">
+			<div class="class-gallery__scrim">
+				<span class="class-gallery__label"> {{ options.class_seventh_label }}</span>
+				<a class="class-gallery__link" href="{{options.class_seventh_link}}">Learn More
+				</a>
+			</div>
+	</div>
+	{# not loading for some reason #}
+	<div class="class-gallery__item" style="background-image: url({{ Image(options.class_eighth_img).src('large') }})">
+			<div class="class-gallery__scrim">
+				<span class="class-gallery__label"> {{ options.class_eighth_label }}</span>		
+			<a class="class-gallery__link" href="{{options.class_eighth_link}}">Learn More
+			</a>
+			</div>
+	</div>
+</div>

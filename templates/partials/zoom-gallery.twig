@@ -1,0 +1,7 @@
+{% include 'partials/section-title.twig' with {title:'Upcoming Classes', subtitle: 'Awareness Through Movement, Aikido, and More'} %}
+<div class="zoom">
+ {% filter shortcodes %}
+	[zoom_list_meetings per_page="{{meetings}}" type="upcoming" filter="no" pagination:"no"]
+ {%  endfilter %}
+ <a href="schedule" id="schedule-btn" class="zoom__view-schedule" style="visibility: {{viewschedule}}"> View Full Schedule </a>
+</div>

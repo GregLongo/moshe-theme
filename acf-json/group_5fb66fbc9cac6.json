@@ -1,0 +1,43 @@
+{
+    "key": "group_5fb66fbc9cac6",
+    "title": "quote-of-the-day",
+    "fields": [
+        {
+            "key": "field_5fb66fe1123fc",
+            "label": "qotd",
+            "name": "qotd",
+            "type": "textarea",
+            "instructions": "this is just a placeholder until i figure out what they are using to pull in the quote",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "sdf;lksdhfksdhflksdjvlkjsdlvjsdlkvjlv",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1606705026
+}

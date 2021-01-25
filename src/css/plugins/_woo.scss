@@ -1,0 +1,138 @@
+.woocommerce{
+
+	&-ordering{
+		float: left!important;			
+		@include tablet{
+			float: right!important;			
+		}
+	}
+	&-product-gallery{
+		pointer-events: $woo-product-gallery-zoom;
+	}
+	&-info{
+		border-top-color: $woo-accent-color !important;
+		&:before{
+			color: $woo-accent-color !important;
+		}
+	}
+	.container.content-wrapper{
+	padding-right: $container-margin-large;
+	padding-left: $container-margin-large;
+	margin-top: $section-spacer-default/1.5;
+	font-family: $font-text;
+	@include tablet{
+		padding-top: $section-spacer-default/1.5;
+		padding-bottom: $section-spacer-default;
+	}
+	.single_add_to_cart_button,.checkout-button,#place_order{
+		background-color: $button-color !important;
+		outline: none;
+		&:hover{
+			background-color: $button-color-hover !important;			
+			}
+		}		
+	}
+	.product h2{
+		@include tablet{
+			color: $color-swatch-headstand-4 !important;			
+			font-weight: 600;
+			&:hover{
+				color: $color-swatch-headstand-1 !important;		
+			}			
+		}
+	}
+	li,p,th,td{
+		font-family:$font-text;
+		line-height: $page-generic-line-height;
+	}
+	h1{
+		&.entry-title.product_title{
+			font-size: $h1-woo-product-title-size;
+			text-align: $h1-woo-product-align;
+		}
+		&.page-title{
+			text-align: center;
+			margin-top: 0;
+			color: $page-title-color-generic;
+		}
+	}
+	h2{
+		font-size: $h2-woo-product-description-title-size;
+	}
+	&-breadcrumb{
+		display: $woo-show-breadcrumb;
+	}
+	.button.button.alt{
+		outline: none;
+		background-color: $button-color !important;
+		&:hover{
+			background-color: $button-color-hover !important;			
+		}		
+	}
+	.form-row.woocommerce-validated{
+		border-color: $woo-accent-color !important;
+	}
+}
+
+//woocomerce tries to hijack site logo wtf
+.woocommerce img.header__logo,
+ .woocommerce-page img.header__logo,
+  .woocommerce-page img.footer__logo {
+ 	height: $header-logo-height-small;				
+	@include small{
+		height: $header-logo-height-mobile;			
+	}
+	@include mobile{
+		height: $header-logo-height-tablet;
+	}
+	@include tablet{
+		height: $header-logo-height !important; 		
+	}
+}
+
+//my account stuff
+.woocommerce-MyAccount-content{
+	font-family: $font-text;
+	.woocommerce-Message{
+		@include tablet-max{
+			display: flex;
+			flex-direction: column-reverse;		
+			.button{
+				margin-top: 64px;
+				margin-left: -24px;
+			}			
+		}
+	}
+}
+.woocommerce-MyAccount-navigation{
+	width: 25%;
+	margin-bottom: $section-spacer-default/2;
+	ul{
+		display: unset;
+	}
+}
+.woocommerce-MyAccount-navigation-link{
+	&:hover{
+		color: $color-swatch-headstand-2;
+	}
+	&.is-active{
+		color: $color-swatch-headstand-1;
+	}
+}
+
+//login stuff
+
+.show-password-input{
+	top: 4px !important;
+}
+
+//highly experimental but i wann turn the grey button another color
+.woocommerce button.button{
+	background-color: $button-color !important;
+	color: white !important;
+	font-family: $font-headings;
+	font-weight: 400 !important;
+	&:hover{
+		background-color: $button-color-hover !important
+	}
+}

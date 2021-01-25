@@ -1,0 +1,11 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="page--generic">
+	<h1 class=" page__title page__title--generic">{{ post.title }}</h1>
+	{{ post.content }}
+	{% for layout in post.get_field('page_content').content %}
+		{% include 'partials/fc-handler.twig' with { 'set': 'generic', 'layout': layout } %}
+	{% endfor %}
+	</div>
+{% endblock %}

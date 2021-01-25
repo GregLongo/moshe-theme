@@ -1,0 +1,24 @@
+// Reset box sizing to border box
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// Remove figure margin
+figure {
+  margin: 0;
+}
+
+
+// strip list defaults 4 hamburger
+ol, ul {
+  list-style: none;
+    padding: 0;
+      margin: 0;
+
+}

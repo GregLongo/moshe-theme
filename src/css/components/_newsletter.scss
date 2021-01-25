@@ -1,0 +1,60 @@
+#mc_embed_signup{
+	display: flex;
+	justify-content: center;
+	margin-top: 1em;
+	height: 100%;
+	@include tablet{
+		margin-top: 4em;
+		justify-content: flex-start;
+	}
+}
+
+#mc_embed_signup_scroll{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	@include tablet{
+		flex-direction: row;
+		align-items: flex-end;
+	}
+}
+
+.mc-field-group{	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: $font-headings;
+	label{
+		color: white;
+		font-size: 16px;
+	}
+}
+
+.email{
+	height: $newsletter-email-height;		
+	width: $newsletter-email-width;
+	margin: 0 1em 1em 1em;
+	border: none;
+	text-align: $newsletter-email-align;
+	@include tablet{
+		width: $newsletter-email-width-mobile;
+		height: $newsletter-email-height;
+		margin: 0 2em 0 0;		
+	}
+}
+
+#mc-embedded-subscribe{
+	display: flex;
+	height: $newsletter-email-height;
+	padding: 0 2em;
+	border: none;
+	outline: none;
+	background-color: $button-color;
+	cursor: pointer;
+	font-family: $button-font;
+	font-weight: 500;
+	color: white;
+	&:hover{
+		background-color: $button-color-hover;		
+	}
+}

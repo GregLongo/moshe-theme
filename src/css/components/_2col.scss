@@ -1,0 +1,39 @@
+.two-col{
+	&__wrapper{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-right: $container-margin-large;
+		margin-left: $container-margin-large;
+		@include widescreen{
+			flex-direction: row;
+		}
+	}
+	&__img{
+		text-align: center;
+		img{
+			width: 100%;
+		}
+		@include tablet{
+			flex:100%;
+			text-align: unset;
+			img{
+				width: unset;
+			}
+		} 
+	}
+	&__text{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-top: 2em;		
+		padding-bottom: 2em;	
+		font-family: $font-text;
+		font-size: $two-col-text;	
+		line-height: $page-generic-line-height;	
+		@include widescreen{
+			padding: 0 4em;		
+		}
+	}
+}

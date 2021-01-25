@@ -1,0 +1,21 @@
+.home{
+	.section-title{
+		@include mobile-max{
+		margin-top: 0;
+		//all but first title override. slightly hacky but kinda neat
+		~ .section-title{
+				margin-top: $section-spacer-default !important;
+			}
+		}
+	}
+}
+
+
+.title-large--home{
+		margin-top:0;
+		font-family: $font-gothic;
+		font-size: $intro-paragraph-header-mobile;
+		@include tablet{
+			font-size: $intro-paragraph-header;
+		}
+	}

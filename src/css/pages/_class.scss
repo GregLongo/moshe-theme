@@ -1,0 +1,123 @@
+.class{
+	&__description{
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		margin-top: $section-spacer-default;
+		margin-bottom: none;
+		padding-left: $container-margin-large;
+		padding-right: $container-margin-large;
+		font-family: $font-text;
+		@include desktop{
+			flex-direction: row;
+			margin-bottom: $section-spacer-default;
+		}
+		@include xl{
+			padding-left: $container-margin-medium;
+			padding-right: $container-margin-medium;			
+		}
+		.windowpane{
+			margin-bottom: $section-spacer-default;
+			@include desktop{
+				margin-bottom: $section-spacer-default - $windowpane-vert-offset;
+			}
+		}
+	}
+}
+
+.wysiwyg--class__description{
+	margin-bottom: $section-spacer-default;
+	padding-left: $container-margin-large/2;
+	background: none;
+	font-family: $font-text;
+	font-size: $page-generic-font-size;
+}
+
+.wysiwyg__content--class{
+	h1{
+		margin: 0;
+		font-size: $intro-paragraph-header;
+	}
+	h3{
+		margin: 0;
+		font-size: 1.5em;
+	}
+}
+.buy-course{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow-y: visible;
+	margin-top: $section-spacer-default;
+	margin-bottom: -$anim-section-vertical-padding/1.5;
+	padding-top: $anim-section-vertical-padding;
+	padding-bottom: $anim-section-vertical-padding * 2;
+	padding-left: $container-margin-large;
+	padding-right: $container-margin-large;
+	background-image: $anim-section-bg;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	filter: drop-shadow( $curve-shadow);
+	text-align: center;
+	@include tablet{
+		flex-direction: row;
+		margin-bottom: $section-spacer-default;		
+		padding:  $container-margin-large ;
+		background-size: 100% 100%;
+		text-align: left;
+	}
+	@include xl{
+		padding-left: $container-margin-medium;
+		padding-right: $container-margin-medium;			
+	}
+	&__listing{
+		@include tablet{
+			flex: 50%;				
+		}
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;	
+		margin: $anim-section-vertical-padding/2 auto auto auto;
+	}
+	&__price{
+		font-family: $buy-course-price-font;
+		font-size: $buy-course-price-size;
+		color: $buy-course-price-color !important;
+		@include tablet{
+			margin-bottom: $buy-course-price-margin;			
+		}
+	}
+	&__img{
+		height: auto;
+		width: $buy-course-img-width-mobile;	
+		@include tablet{
+			flex: 50%;
+			height: $buy-course-img-height;
+			width: auto;	
+			padding-left: 1em;			
+		}
+	}
+	&__button {
+		width: 100%;
+		margin-top: $section-spacer-default;
+		margin-bottom: $section-spacer-default;
+		@include tablet{
+			width: initial;
+			margin-bottom: initial;
+			margin-top: initial;
+		}
+		a{
+			width: fit-content;
+			padding: $buy-course-button-padding;
+			cursor: pointer;
+			background: $button-color;
+			font-family: $button-font;
+			font-size: $buy-course-button-text;
+			text-align: center;
+			color: white !important;
+			&:hover{
+				background: $button-color-hover;
+			}
+		}
+	}
+}

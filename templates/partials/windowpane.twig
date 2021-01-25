@@ -1,0 +1,7 @@
+<div class="windowpane">
+	{% for image in post.meta('windowpane-images') %}
+		<div class="windowpane__pane windowpane__pane--{{location}}" id='windowpane-{{loop.index}}'>
+		<div class="windowpane__img" style ="background-image:url({{Image(image).src('large')}})"></div>
+		</div>
+	{% endfor %} 
+</div>

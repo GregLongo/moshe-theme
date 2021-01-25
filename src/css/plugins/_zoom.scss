@@ -1,0 +1,197 @@
+.vczapi-list-zoom-meetings{ 
+	&--item{
+		width: 100% !important;
+		margin-bottom: $zoom-gallery-item-margin !important;
+		// min-width: $zoom-gallery-item-min-width;
+		border: $zoom-gallery-item-border;
+		background: $zoom-gallery-item-bg;
+		@include desktop{
+			// width: 8% !important;
+			// margin-right: 2% !important;
+		}
+		@include widescreen{
+			// margin-right: 0px !important;
+		}
+		&s{
+			display: grid !important;
+			grid-template-columns: repeat(1, 1fr);
+			grid-column-gap: 24px;
+			grid-row-gap: 0;
+			// justify-content: center;
+			// margin-bottom: 56px;
+			@include mobile{
+				// grid-template-columns: repeat(2, 1fr);
+			}
+			@include mobile{
+				grid-template-columns: repeat(2, 1fr);
+			}
+			@include desktop{
+				grid-template-columns: repeat(3, 1fr);
+				// justify-content: flex-start;
+			}
+			@include widescreen{
+				grid-template-columns: repeat(4, 1fr);
+				// justify-content: space-between;				
+			}
+		}
+		&__image{
+			overflow: hidden;
+			height: $zoom-gallery-item-img-height;
+			img{
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+				// filter: saturate(0) contrast(.9);//filters disabled by client request
+				// opacity: 1; 
+				// mix-blend-mode: hard-light;
+			}
+		}
+		&__details{
+			font-family: $font-text;
+			padding: 0 24px 24px 24px;
+			a:nth-child(1),a:nth-child(2){
+				color: $color-swatch-headstand-4;
+				&:hover{
+					color: $color-swatch-headstand-1;					
+				}
+			}
+			&__meta{
+				.hosted-by{
+					display: $zoom-gallery-show-host !important;
+				}
+				margin-bottom: 24px;
+			}
+		}
+	}
+	&--pagination{
+		display:none;
+	}
+	.btn{
+		margin-top: 10px;
+		padding: $zoom-gallery-item-button-padding;
+		background: $button-color;
+		color: white;
+		&:hover{
+			background-color: $button-color-hover;
+		}
+	}
+}
+
+
+//color effects broken out for sanity 
+//(turned off for dovetail client no like)
+// .vczapi-list-zoom-meetings--item:nth-child(odd){
+// 	.vczapi-list-zoom-meetings--item__image{
+// 		background-color: $color-swatch-headstand-4;
+// 	}
+// }
+// .vczapi-list-zoom-meetings--item:nth-child(even){
+// 	.vczapi-list-zoom-meetings--item__image{
+// 		background-color: $color-swatch-headstand-3;
+// 	}
+// }
+
+
+.zoom{
+	margin-left: $container-margin-large;
+	margin-right: $container-margin-large;
+	text-align: center;
+	@include tablet{
+		text-align: left;
+	}
+	@include xl{
+	margin-left: $container-margin-medium;
+	margin-right: $container-margin-medium;		
+	}
+	&__view-schedule{
+		width: 80%;
+		text-align: center;
+		// margin-top: 200px;
+		align-self: center;
+		// margin-right: auto;
+		// margin-left: auto;
+		height: fit-content;
+		padding: $zoom-gallery-item-button-padding;	
+		background: $button-color;
+		font-family: $font-text;
+		color: white;
+		&:hover{
+			transition: opacity .2s;
+			background-color: $button-color-hover;
+		}
+	}
+}
+
+//zoom theater
+
+.dpn-zvc-single-content-wrapper{
+	display: flex;
+	justify-content: center;
+	flex-direction: column-reverse;
+	margin-right: $container-margin-large;
+	margin-left: $container-margin-large;
+	margin-top: 0 !important;
+	font-family: $font-text;
+	@include tablet{
+		flex-direction: row;		
+	}
+	p{
+		line-height: $page-generic-line-height;
+	}
+
+}
+
+.deepn-zvc-single-featured-img img{
+	max-height: 50vw;
+	overflow-y: hidden;
+}
+
+.btn-join-link{
+	background-color: $zoom-join-link-color !important;
+		&:hover{
+			background-color: $button-color-hover !important;
+		}
+}
+.btn-start-link{
+	background-color: $zoom-start-link-color !important;
+		&:hover{
+			background-color: $zoom-start-link-hover-color !important;
+		}
+}
+
+.dpn-zvc-sidebar-content{
+	background-color: $zoom-sidebar-color !important;			
+}
+.dpn-zvc-sidebar-tile{
+	background-color: $zoom-header-color !important;	
+}
+.dpn-zvc-timer-cell{
+	background-color: $zoom-timer-color !important;		
+}
+
+.dpn-zvc-shortcode-op-wrapper{
+	font-family: $font-text;
+}
+
+.schedule{
+	margin-bottom: $section-spacer-default;
+}
+
+.vczapi-woocommerce-email-mtg-details{
+	display: block !important;
+	> li 
+		{
+			font-weight: unset;
+			a{
+			line-height: 4;
+			font-size: 16px !important;
+			margin-top: 32px;
+			padding: 10px 20px;
+			color: white;
+			background-color: $zoom-join-link-color !important;
+			&:hover{
+			background-color: $button-color-hover !important;
+			}	
+		}			
+	}
+}

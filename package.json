@@ -1,0 +1,70 @@
+{
+  "name": "moshe",
+  "version": "1.0.2",
+  "description": "mostly basic stuff",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./scripts/build.js",
+    "start": "node ./scripts/start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tadejstanic/wp-hrm-webpack.git"
+  },
+  "author": "Tap Bone",
+  "license": "MIT",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "7.1.3",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.13",
+    "bs-html-injector": "^3.0.3",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "0.28.10",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^6.2.0",
+    "filehound": "^1.17.4",
+    "fs-extra": "^5.0.0",
+    "gsap": "^3.5.1",
+    "imports-loader": "^1.2.0",
+    "postcss": "6.0.19",
+    "postcss-cssnext": "3.1.0",
+    "postcss-import": "11.1.0",
+    "postcss-loader": "2.1.1",
+    "scrollmagic": "^2.0.8",
+    "slide-and-swipe-menu": "^1.2.6",
+    "style-loader": "0.20.2",
+    "url-loader": "^4.1.1",
+    "webpack": "4.1.0",
+    "webpack-dev-middleware": "3.0.0",
+    "webpack-hot-middleware": "^2.25.0",
+    "write-file-webpack-plugin": "4.2.0"
+  },
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "autoprefixer": "^8.6.5",
+    "babel-runtime": "^6.20.0",
+    "bigslide": "^0.12.1",
+    "expose-loader": "^0.7.5",
+    "flexslider": "^2.7.2",
+    "hamburgers": "^1.1.3",
+    "jquery": "^3.5.1",
+    "jquery-powertip": "^1.3.1",
+    "jquery-touchswipe": "^1.6.19",
+    "luxy.js": "^0.1.0",
+    "mmenu-light": "^3.0.7",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.3.1",
+    "scrollmagic-plugin-gsap": "^1.0.4",
+    "slick-carousel": "^1.8.1",
+    "smooth-scrollbar": "^8.5.3",
+    "smoothscroll-for-websites": "^1.4.10",
+    "uglifyjs-webpack-plugin": "^1.3.0",
+    "webpack-merge": "^4.2.2"
+  }
+}

@@ -1,0 +1,31 @@
+{% include 'partials/section-title.twig' with {title:'Services', subtitle: 'Offered Via Video or In Person'} %}
+<div class="class-gallery">
+	<div class="class-gallery__item" style="background-image: url({{ Image(options.class_primary_img).src('large') }})">
+			<div class="class-gallery__scrim">
+				<span class="class-gallery__label"> {{ options.class_primary_label }}</span>
+				<a class="class-gallery__link" href="{{options.class_primary_link}}">Learn More
+				</a>
+			</div>
+	</div>
+	<div class="class-gallery__item" style="background-image: url({{ Image(options.class_secondary_img).src('large') }})">
+		<div class="class-gallery__scrim">
+			<span class="class-gallery__label"> {{ options.class_secondary_label }}</span>
+			<a class="class-gallery__link" href="{{options.class_secondary_link}}">Learn More
+			</a>
+		</div>
+	</div>
+	<div class="class-gallery__item" style="background-image: url({{ Image(options.class_tertiary_img).src('large') }})">
+			<div class="class-gallery__scrim">
+				<span class="class-gallery__label"> {{ options.class_tertiary_label }}</span>
+				<a class="class-gallery__link" href="{{options.class_tertiary_link}}">Learn More
+				</a>
+			</div>
+	</div>
+	<div class="class-gallery__item" style="background-image: url({{ Image(options.class_quaternary_img).src('large') }})">
+			<div class="class-gallery__scrim">
+				<span class="class-gallery__label"> {{ options.class_quaternary_label }}</span>		
+			<a class="class-gallery__link" href="{{options.class_quaternary_link}}">Learn More
+			</a>
+			</div>
+	</div>
+</div>

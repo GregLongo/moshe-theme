@@ -1,0 +1,168 @@
+.slider{
+	min-height: 600px;
+	overflow-x: hidden;
+	&__slide{
+		display: flex !important;
+		align-items: center;
+		height: $slider-height-mobile;
+		justify-content: center;	
+		background-position: center;
+		@include tablet {
+			align-items: $slider-content-vertical;
+			justify-content: $slider-content-horizontal;	
+			height: $slider-height;
+		}
+		@include tablet-max{
+			background-size:  cover !important; //turn off ken burns at ###
+		}
+	}
+	&__cta{
+		// align-items: flex-end;
+		position: absolute;
+		z-index: 11;
+		text-align: center;
+		margin-right: $container-margin-large;	
+		margin-left: $container-margin-large;			
+		@include tablet{
+			// align-items: unset;
+			position: unset;
+			bottom: unset;
+			margin-top:unset;
+			margin-right: $slider-content-margin-right;
+			margin-bottom: $slider-content-margin-bottom;	
+			width: unset;
+			text-align: right;
+			width: $slider-caption-min-width;
+
+		}
+	}
+	&__caption{
+		// whitespace: wrap;
+		// position:flex; //?
+		z-index: 11;
+		margin-bottom: $slider-caption-margin-bottom;
+		font-size: $slider-caption-font-size-small;
+		font-family: $slider-caption-font;
+		font-weight: $slider-caption-font-weight;
+		text-align: center;
+		color: $slider-caption-font-color;
+		@include small{
+			font-size: $slider-caption-font-size-mobile;			
+		}
+		@include mobile{
+			font-size: $slider-caption-font-size-tablet;			
+		}
+		@include tablet{
+			position: initial;
+			text-align: $slider-caption-text-align;
+			font-size: $slider-caption-font-size;
+		}
+		@include widescreen{
+			whitespace: nowrap;
+		}
+
+	}
+	&__button{
+		position: absolute;
+		z-index: 11;
+		white-space: nowrap;
+		left: 50%;
+		// bottom: $hero-button-bottom;
+		transform: translateX(-50%);
+		width: fit-content;
+		margin: auto;
+		padding: $slider-button-padding-mobile;
+		border: $slider-button-border;
+		background: $slider-button-background;
+		cursor: pointer;
+		font-family: $font-text;
+		font-size: $slider-button-font-size-mobile;
+		text-align: center;
+		color: $text-color-light;
+		@include mobile{
+			padding: $slider-button-padding-tablet auto;			
+		}
+		@include tablet{
+			left: unset;
+			position: relative;
+			bottom: unset;
+			float: $slider-button-float;			
+			transform: none;
+			width: $slider-caption-min-width;
+			font-size: $slider-button-font-size;
+		}
+		&:hover{
+			background-color: $slider-button-background-hover;
+		}
+		a{
+			outline: none;
+		}
+	}
+	&__scrim{
+		position: absolute;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		opacity: .8;
+		height: 100%;
+		width: 100%;
+		background: $slider-scrim-mobile;
+		@include tablet{
+			opacity: 1;
+			height: 100%;
+			background: $slider-scrim;
+		}
+	}
+}
+
+//bem local inheritance for modified elements, no modifiers on subclass
+//see https://seesparkbox.com/foundry/bem_by_example
+.hero--class{//maybe i should be the global hero?
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: $hero-height;
+	margin-top: -5vh; //fixes weird white space at top caused by parallax fx i think
+	background-position: center;
+	background-size: auto 100%;		
+	@include tablet{
+		justify-content: $hero-content-justify;
+		align-items: $hero-content-align;
+		padding-left: $header-padding-left;
+		padding-right: $header-padding-right;
+		background-size: cover;		
+	}
+	.hero__title h1{
+		position: relative;
+		z-index: 11;
+		margin-bottom: $slider-caption-margin-bottom;
+		font-size: $slider-caption-font-size-small;
+		color: $hero-caption-font-color;
+		@include small{
+			font-size: $slider-caption-font-size-mobile;			
+		}
+		@include mobile{
+			font-size: $slider-caption-font-size-tablet;			
+		}
+		@include tablet{
+			font-size: $hero-caption-font-size;		
+		}
+	}
+	.slider{
+		&__scrim{
+			position: absolute;
+			z-index: 1;
+			height: $hero-height;
+			background: $slider-scrim-mobile;
+			@include tablet{
+				top: 32px;//for some reason
+				background: $slider-scrim;
+				}
+			}
+		&__cta{
+			z-index: 1;
+			}	
+		}
+}
+
+

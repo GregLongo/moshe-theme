@@ -1,0 +1,11 @@
+<div class="slider ken-burns">
+	{% for image in post.meta('home-slider') %}
+		<div class="slider__slide" style="background-image: url({{ Image(image) }}) ">
+				<div class="slider__scrim"></div>
+				<div class="slider__cta">
+					<div class="slider__caption">{{ Image(image).caption }}</div>
+					<div class="slider__button"><a href={{post.meta('cta-link')}}>{{post.meta('cta-text')}}</a></div>
+				</div>
+			</div>
+	{% endfor %}
+</div>

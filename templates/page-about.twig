@@ -1,0 +1,12 @@
+{% extends "base.twig" %}
+
+{%   block content %}
+	<h1 class="page__title page__title--about">{{ post.title }}</h1>
+	{% include "partials/2col.twig" with {direction:'rtl'} %}
+	}
+	<div class="about__sculpture">
+		{% include 'partials/wysiwyg.twig' with {location:'about'} %}
+		{% include 'partials/windowpane.twig' with {location:'about'} %}
+	</div>
+	{% include 'partials/mission-statement.twig' %}
+{%  endblock %}

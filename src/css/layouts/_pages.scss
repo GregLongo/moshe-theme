@@ -1,0 +1,119 @@
+.page{
+	display: flex;
+    flex-direction: column;
+	min-height:100vh;
+	.content-wrapper{
+		flex: 1;
+	}
+	&__title{
+		padding-top: $page-padding-top-generic-mobile;		
+		text-align: $page-title-align-generic; 
+		color: $page-title-color-generic;
+		@include tablet{
+			padding-top: $header-height;		
+		}
+	}
+	&--generic{
+		margin-right: $container-margin-large;			
+		margin-left: $container-margin-large;		
+		margin-bottom: $section-spacer-default;
+		@include tablet{
+			margin-right: $container-margin-medium;			
+			margin-left: $container-margin-medium;				
+		}
+		p{
+			font-family: $font-text;
+			font-size: $page-generic-font-size-mobile;
+			line-height: $page-generic-line-height;
+			@include mobile{
+				font-size: $page-generic-font-size;
+			}
+		}
+		ul{
+			@include mobile{
+				//this is why grid rocks
+				display: grid;
+				grid-template-columns: repeat(2, auto);			
+			}
+		}
+		li{
+			font-family: $page-generic-list-item-font;
+			font-size: $page-generic-list-item-size;
+			line-height: $page-generic-list-line-height;		
+			font-weight: $page-generic-list-item-weight;
+		}
+		h1{
+			text-align: $h1-page-generic-align;
+		}
+		h2{
+			font-size: $h2-global-size;
+		}
+		h3{
+			font-size: $h3-global-size;			
+		}
+		h4{
+			font-size: $h4-global-size;						
+		}
+		hr{
+		margin-bottom: $section-spacer-default;
+		}
+		img[class^="wp-image"], img[class*="wp-image"]{
+			display: flex;
+			max-width: 100%;
+			height: auto;
+			margin: $section-spacer-default/2 auto $section-spacer-default/2 auto;
+			@include tablet{
+				// width: initial;
+				// margin: ($section-spacer-default * .5) auto ;
+			}
+			&.aligncenter{
+				justify-self: center;
+			}
+			&.alignnone,&.alignleft{
+				margin-left: unset;
+				margin-right: unset;
+			}
+		}
+
+	}
+	&-template-class-page{
+		.header{
+		}
+		.qotd{
+			margin-right: $container-margin-medium;
+			margin-left: $container-margin-medium;
+			margin-bottom: $section-spacer-default;
+			@include tablet{
+				padding-top: 0;			
+			}
+		}
+	}
+}
+
+.single .site-main{
+	margin-top: $header-height-mobile;				
+	@include tablet{
+		margin-top: $header-height;				
+	}
+}
+
+.content-wrapper{
+	overflow-x: hidden;
+	.schedule{
+		overflow-y: hidden;		
+	}
+}	
+
+
+//hide main button on audio page. probably need to change this
+.page-template-default .slider__button{
+	display: none;
+}
+
+.page-template-default .section-title{
+	display: none;
+	margin-top: 0;
+	~ .section-title{
+		margin-top: $section-spacer-default !important;
+	}
+}

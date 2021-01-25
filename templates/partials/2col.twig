@@ -1,0 +1,17 @@
+<div class="two-col__wrapper">
+	{% if direction == 'rtl' %}
+		<div class="two-col__img">
+			<img src="{{ Image(post.meta('2col-img')).src('large') }}" />
+		</div>
+		<div class="two-col__text">
+			{{ post.meta('2col-text') }}
+		</div>
+	{% else %}
+		<div class="two-col__text">
+			{{ post.meta('2col-text') }}
+		</div>
+		<div class="two-col__img">
+			<img src="{{ Image(post.meta('2col-img')).src('large') }}" />
+		</div>
+	{% endif %}
+</div>

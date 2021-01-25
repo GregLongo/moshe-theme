@@ -1,0 +1,16 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	{% include "partials/hero-class.twig" %}
+	{% include "partials/wysiwyg.twig" with {location:'class'} %}
+	<div class="class__description">
+		{% include "partials/windowpane.twig" with {location:'class'} %}
+		{% include "partials/wysiwyg-class.twig" %}
+	</div>
+	<hr>
+	{% include "partials/class-gallery.twig" %}
+	{% include "partials/buy-course.twig" %}
+	<div class="homes__misc">
+		{% include "partials/qotd.twig" %}
+	</div>
+{% endblock %}

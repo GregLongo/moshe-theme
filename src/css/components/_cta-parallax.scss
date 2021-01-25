@@ -1,0 +1,42 @@
+.cta-parallax{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position:relative;
+	z-index: 1;
+	height: $cta-parallax-height;
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-affix: fixed;
+	background-position-y: -50%;
+	background-color: #AFC36C93;
+	background-blend-mode: multiply;
+	&__outer{
+		clip-path: url("#svgmask");
+		@include xl{
+			clip-path: url("#svgmasklg");
+		}
+	}
+	&__inner{
+		position: relative;
+		top: 50%;
+		z-index: 10;
+		transform: translateY(-50%);
+		text-align: center;
+		@include tablet{
+			top: 25%;
+			margin-top: $section-spacer-default/1.5;
+			margin-left: $container-margin-large/2;			
+			text-align: left;
+		}
+	}
+	&__msg{
+		display: block;
+		font-size: $cta-parallax-header-size-mobile;
+		font-family: $font-headings;
+		color: white;
+		@include tablet{
+			font-size: $cta-parallax-header-size;			
+		}
+	}
+}
